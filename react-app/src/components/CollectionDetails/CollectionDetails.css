@@ -1,7 +1,6 @@
 .main-collection-details-container {
 display: flex;
 flex-direction: column;
-/* z-index: 3000; */
 }
 
 .collection-details {
@@ -98,7 +97,6 @@ flex-direction: column;
 
 
 #link-add-post-button1 {
-
     font-size: 8px;
     text-decoration: none;
     background-color: rgb(30, 206, 206);
@@ -179,27 +177,27 @@ flex-direction: column;
     margin-left: 20px;
     margin-right: 0;
     margin-top: 10px;
-  }
+}
 
-  .post-dots-container1:hover {
+.post-dots-container1:hover {
     cursor: pointer;
     color: aqua;
-  }
+}
 
 
-  .transparent-button {
+.transparent-button {
     margin-top: 100px;
     color: rgb(60, 59, 59);
     font-size: 14px;
-  }
+}
 
 
-  .remove-post {
+.remove-post {
     background-color: transparent;
-  }
+}
 
 
-  .menu-text1 {
+.menu-text1 {
     font-style: oblique;
     margin: 0;
     border: none;
@@ -207,22 +205,22 @@ flex-direction: column;
     width: 80px;
     height: 20px;
     color: rgb(147, 145, 145);
-  }
+}
 
-  .menu-text1:hover {
+.menu-text1:hover {
     cursor: pointer;
     background-color: rgb(30, 206, 206);
     color: white;
-  }
+}
 
-  .duza-kropka {
+.duza-kropka {
     margin-right: 2px;
     font-size: 20px;
     color: white;
-  }
+}
 
 
- .home-button-your-collections {
+.home-button-your-collections {
     width: 230px;
     height: 35px;
     font-size: 16px;
@@ -232,9 +230,9 @@ flex-direction: column;
     background-color: rgb(30, 206, 206);
     border-radius: 10px;
     color: white;
- }
+}
 
- .home-button-your-collections:hover {
+.home-button-your-collections:hover {
     cursor: pointer;
     background-color: aqua;
- }
+}

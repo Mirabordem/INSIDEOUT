@@ -2,6 +2,8 @@ export const GET_ALL_POSTS = "posts/GET_ALL_POSTS";
 export const GET_SINGLE_POST = "posts/GET_SINGLE_POST";
 export const CREATE_SINGLE_POST = "posts/CREATE_SINGLE_POST";
 export const DELETE_SINGLE_POST = "posts/DELETE_SINGLE_POST";
+export const POSTS_SEARCH = "post/POSTS_SEARCH"
+export const CLEAR_SEARCH_RESULTS = "post/CLEAR_SEARCH_RESULTS"
 
 export const FETCH_PHOTO_URL_REQUEST = "posts/FETCH_PHOTO_URL_REQUEST";
 export const FETCH_PHOTO_URL_SUCCESS = "posts/FETCH_PHOTO_URL_SUCCESS";
@@ -42,6 +44,15 @@ export const fetchPhotoUrlSuccess = (photoUrl) => ({
 export const fetchPhotoUrlFailure = (error) => ({
   type: FETCH_PHOTO_URL_FAILURE,
   error,
+});
+
+const searchPosts = (posts) => ({
+  type: POSTS_SEARCH,
+  posts
+})
+
+export const clearSearchResults = () => ({
+  type: CLEAR_SEARCH_RESULTS,
 });
 
 
@@ -178,6 +189,23 @@ export const editSinglePostThunk = (postId, formData) => async (dispatch) => {
 
 //___________________________________________________
 
+// searchBar:
+
+export const searchPostsThunk = (search) => async (dispatch) => {
+  const response = await fetch(`/api/posts/search/${search}`)
+  if (response.ok) {
+      const data = await response.json();
+      dispatch(searchPosts(data));
+      return data;
+  } else {
+      const errors = await response.json();
+      return errors;
+  }
+}
+
+
+//___________________________________________________
+
 const initialState = { allPosts: {}, singlePost: {} };
 
 //___________________________________________________
@@ -221,7 +249,7 @@ export default function postsReducer(state = initialState, action) {
       delete newState.allPosts[action.postId];
       return newState;
 
-      
+
     case FETCH_PHOTO_URL_REQUEST:
       return {
         ...state,
@@ -241,6 +269,20 @@ export default function postsReducer(state = initialState, action) {
         error: action.error,
         loading: false,
       };
+
+    case POSTS_SEARCH:
+        newState = {}
+        action.posts.forEach((post) => newState[post.id] = post)
+        return newState
+
+        case CLEAR_SEARCH_RESULTS:
+          return {
+            ...state,
+            allPosts: {},
+          };
+
+
+
 
     default:
       return state;

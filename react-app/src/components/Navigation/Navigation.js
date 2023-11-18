@@ -1,15 +1,35 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useState } from "react";
+import { useHistory, NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import ProfileButton from "./ProfileButton";
 import CreateButton from "./CreateButton";
+import { searchPostsThunk, clearSearchResults } from "../../store/post"
 import "./Navigation.css";
 
 
-function Navigation({ isLoaded }) {
+export default function Navigation({ isLoaded }) {
+  const dispatch = useDispatch()
+  const { push } = useHistory()
   const sessionUser = useSelector((state) => state.session.user);
   const user = useSelector((state) => state.session.user);
   const post = useSelector((state) => state.posts.singlePost);
+  const [search, setSearch] = useState("")
+  const [errors, setErrors] = useState('')
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    dispatch(clearSearchResults());
+    const data = await dispatch(searchPostsThunk(search))
+    if (!data.errors) {
+        setSearch('')
+        return push('/search')
+    } else {
+        setErrors(data.errors)
+    }
+}
+
 
   return (
     <div className="nav-container">
@@ -30,9 +50,25 @@ function Navigation({ isLoaded }) {
           ></img>
         </NavLink>
       )}
+
+      <div className="search-bar-container">
+            <form className="search-form" onSubmit={handleSubmit}>
+                <input
+                value={search}
+                onChange={e => setSearch(e.target.value)}
+                className="search-window1"
+                id="searchBar"
+                type="search"
+                placeholder="Search for a Post by Title..." />
+                <button className="search-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+            <p>{errors}</p>
+        </div>
+
+
       {isLoaded && (
         <div className="nav-profile">
-          
+
           {sessionUser ? (
             post ? (
               <CreateButton user={user} postId={post.id} />
@@ -44,5 +80,3 @@ function Navigation({ isLoaded }) {
     </div>
   );
 }
-
-export default Navigation;

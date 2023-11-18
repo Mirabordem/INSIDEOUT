@@ -153,10 +153,10 @@ export default function PostDetails() {
       {/* <div className="lets-talk">LET'S TALK...</div> */}
     <div className="leave-the-comment">
       <div className={!userComments.length && userId && userId !== currPost?.userId ? "centerMe" : "hidden"}>
-      <h3 className="comments-title">{commentArr.length ? "" : "Be the First To Comment!"}</h3>
+      <h3 className="comments-title">{commentArr.length ? "" : "Be The First To Comment!"}</h3>
         <OpenModalButton
             className='leave-comment'
-            buttonText="LEAVE THE COMMENT"
+            buttonText="SHARE YOUR THOUGHTS"
             modalComponent={<AddComment postId={post.id} />}
             />
         </div>

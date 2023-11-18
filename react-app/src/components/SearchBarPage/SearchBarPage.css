@@ -1,0 +1,69 @@
+.search-page-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.collection-details1 {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(60, 59, 59);
+    height: 200px;
+    width: 100%;
+    color: white;
+    font-size: 36px;
+}
+
+.main-home-container3 {
+    display: grid;
+    grid-template-columns: 1fr 3.5fr 1fr
+}
+
+.Masonry {
+    flex-direction: column;
+}
+
+.image-grid3 {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 0;
+    box-sizing: content-box;
+    min-height: calc(100vh - 100px);
+}
+
+
+.my-masonry-grid3 {
+    display: flex;
+    margin-left: 0;
+    width: auto;
+}
+
+.my-masonry-grid_column {
+    padding-left: 0;
+    background-clip: padding-box;
+}
+
+.my-masonry-grid_column > div {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.no-search-result-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 60px;
+}
+
+#no-search-result {
+    margin-left: auto;
+    color: orange;
+    font-size: 18px;
+}

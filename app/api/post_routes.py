@@ -204,3 +204,15 @@ def delete_post(postId):
 
 
 #___________________________________________________
+
+
+
+@post_routes.route('/search/<search>')
+def posts_search(search):
+    searched_posts = Post.query.filter(Post.title.ilike(f'%{search}%'))
+
+    if posts_search:
+        return [post.to_dict() for post in searched_posts]
+    else:
+        return {"errors": "There is no post to match your search."}
+   
