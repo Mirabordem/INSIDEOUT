@@ -35,18 +35,10 @@ export default function Home() {
           <div className="dropdown10">
             <button
               onClick={toggleDropdown}
-              style={{
-                background: 'transparent',
-                border: '1px solid transparent',
-                color: '#000',
-                cursor: 'pointer',
-                transition: 'color 0.3s',
-              }}
-              className="transparent-button"
-              onMouseOver={(e) => (e.target.style.color = 'aqua')}
-              onMouseOut={(e) => (e.target.style.color = '#000')}
+              className="home-button-your-collections"
             >
-              <span className='duza-kropka'> ● </span> YOUR COLLECTIONS
+              <span className='duza-kropka'> ● </span>
+              YOUR COLLECTIONS
             </button>
             <div className="dropdown5">
             {showDropdown && (

@@ -5,14 +5,14 @@
     justify-content: baseline;
     padding-top: 20px;
     width: 200px;
-    margin-top: 10px;
+    margin-top: 5px;
     color: white;
     /* font-weight: bold; */
     font-size: 14px;
     /* background-color: rgb(183, 183, 183); */
     background-color: rgb(30, 206, 206);
     border-radius: 5px;
-    margin-left: 13px;
+    margin-left: 40px;
 
 }
 
@@ -68,6 +68,7 @@
 
 .add-post-button button:hover {
     background-color: aqua;
+
 }
 
 #collection-list-for-adding-post {

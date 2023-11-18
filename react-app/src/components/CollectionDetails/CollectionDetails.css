@@ -218,6 +218,23 @@ flex-direction: column;
   .duza-kropka {
     margin-right: 2px;
     font-size: 20px;
+    color: white;
   }
 
- 
+
+ .home-button-your-collections {
+    width: 230px;
+    height: 35px;
+    font-size: 16px;
+    margin-top: 120px;
+    transition: color 0.3s;
+    border: none;
+    background-color: rgb(30, 206, 206);
+    border-radius: 10px;
+    color: white;
+ }
+
+ .home-button-your-collections:hover {
+    cursor: pointer;
+    background-color: aqua;
+ }

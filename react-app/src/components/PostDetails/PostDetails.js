@@ -150,6 +150,7 @@ export default function PostDetails() {
         </div>
       </div>
       <div className="horizontal-line"></div>
+      {/* <div className="lets-talk">LET'S TALK...</div> */}
     <div className="leave-the-comment">
       <div className={!userComments.length && userId && userId !== currPost?.userId ? "centerMe" : "hidden"}>
       <h3 className="comments-title">{commentArr.length ? "" : "Be the First To Comment!"}</h3>
@@ -182,16 +183,16 @@ export default function PostDetails() {
                 </div>
               </div>
 
-            <p>{comment.text}</p>
+            <p className="comment-text">{comment.text}</p>
             <div className={comment?.userId !== userId ? "hidden" : "notHidden"}>
             <OpenModalButton
             className='edit-comment-button'
-            buttonText="UPDATE"
+            buttonText="● UPDATE"
             modalComponent={<EditComment commentId={comment.id} postId={post.id}/>}
             />
             <OpenModalButton
             className='delete-comment-button'
-            buttonText="DELETE"
+            buttonText="● DELETE"
             modalComponent={<CommentDelete commentId={comment.id} />}
             />
             </div>
@@ -202,23 +203,14 @@ export default function PostDetails() {
     </div>
     <div>
     <button
-        id="add-post-id"
+        // id="add-post-id"
         onClick={(e) => {
           e.stopPropagation();
           setShowMenu(!showMenu);
         }}
-      style={{
-        background: 'rgb(238, 233, 233)',
-        border: '1px solid transparent',
-        color: '#000',
-        cursor: 'pointer',
-        transition: 'color 0.3s',
-      }}
-      className="transparent-button"
-      onMouseOver={(e) => (e.target.style.color = 'aqua')}
-      onMouseOut={(e) => (e.target.style.color = '#000')}
+        className="post-button-your-collections"
     >
-        ADD POST TO COLLECTION
+          <span className='duza-kropka'> ● </span> ADD POST TO COLLECTION
       </button>
 
       {showMenu && (
