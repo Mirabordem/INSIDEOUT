@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { useHistory } from "react-router-dom"
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useModal } from "../../context/Modal";
 import { SingleCollectionThunk , RemovePostFromCollectionThunk } from "../../store/collection"
 import "./RemovePostFromCollection.css";

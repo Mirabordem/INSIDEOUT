@@ -20,7 +20,7 @@ def get_posts():
     return jsonify([post.to_dict() for post in posts])
 
 
-
+#___________________________________________________
 
 
 @post_routes.route('/<int:postId>', methods=["GET"])
@@ -36,6 +36,8 @@ def getOnePost(postId):
     post_dict = post.to_dict()
     return jsonify(post_dict), 200
 
+
+#___________________________________________________
 
 
 
@@ -57,6 +59,8 @@ def get_post_photo(postId):
     return jsonify({'photoUrl': photo_url}), 200
 
 
+#___________________________________________________
+
 
 
 @post_routes.route("/check/<int:postId>/previous", methods=["GET"])
@@ -72,6 +76,11 @@ def check_prev_post(postId):
     return jsonify({'exists' : False}), 404
 
 
+#___________________________________________________
+
+
+
+
 @post_routes.route("/check/<int:postId>/next", methods=["GET"])
 def check_next_post(postId):
   """
@@ -82,6 +91,10 @@ def check_next_post(postId):
     return jsonify({'nextPostId' : next_post.id}), 200
   else:
     return jsonify({'exists' : False}), 404
+
+
+
+#___________________________________________________
 
 
 
@@ -127,6 +140,9 @@ def create_post():
 
 
 
+#___________________________________________________
+
+
 
 
 @post_routes.route('/edit/<int:postId>', methods=['PUT'])
@@ -157,6 +173,9 @@ def edit_post(postId):
     return {'errors': form.errors}, 400
 
 
+#___________________________________________________
+
+
 
 
 @post_routes.route("/<int:postId>", methods=["DELETE"])
@@ -181,3 +200,7 @@ def delete_post(postId):
     db.session.commit()
 
     return { 'message': 'Successfully Deleted'}, 200
+
+
+
+#___________________________________________________

@@ -3,8 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useModal } from "../../context/Modal";
 import { AddPostToCollectionThunk, AllCollectionsThunk } from "../../store/collection";
-import OpenModalButton from "../OpenModalButton/OpenModalButton";
-import NewCollection from "../NewCollection/NewCollection";
 import './AddPostToCollection.css';
 
 export default function AddPostToCollection({ post_id }) {
@@ -84,10 +82,3 @@ export default function AddPostToCollection({ post_id }) {
 
 
 
-// useEffect(() => {
-    //     const frontendErrors = {};
-    //     if (!selectedCollection) {
-    //         frontendErrors.collection_id = "Please select collection.";
-    //     }
-    //     setFrontendErrors(frontendErrors);
-    // }, [selectedCollection]);

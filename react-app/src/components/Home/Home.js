@@ -17,31 +17,20 @@ export default function Home() {
   const user_collections = collections.filter(collections => collections.user_id === user.id);
   const [showDropdown, setShowDropdown] = useState(false);
 
+
   useEffect(() => {
     dispatch(getAllPostsThunk());
     dispatch(AllCollectionsThunk())
   }, [dispatch]);
 
+
   const toggleDropdown = () => {
-    // console.log("Toggling dropdown", showDropdown);
-    // console.log("collections", collections);
-    // console.log("object", collectionsObj);
     setShowDropdown(!showDropdown);
   };
 
   return (
     <div className="main-home-container">
       <div className="nav-links1">
-        {/* <NavLink
-          style={{ textDecoration: "none" }}
-          onClick={() => setShowMenu(false)}
-          to="/posts"
-          className="your-profile"
-        >
-          <div className="link">
-            YOUR POSTS
-          </div>
-        </NavLink> */}
 
           <div className="dropdown10">
             <button

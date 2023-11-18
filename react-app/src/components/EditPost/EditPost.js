@@ -59,7 +59,6 @@ export default function EditPost() {
     };
 
 
-
     return (
         <div className="new-post-main-container1">
             <img
@@ -118,4 +117,3 @@ export default function EditPost() {
     </div>
 );
 }
-

@@ -17,7 +17,7 @@ def getAllCollections():
     return [collection.to_dict() for collection in collections]
 
 
-
+#___________________________________________________
 
 
 @collection_routes.route('/<int:collectionId>')
@@ -30,6 +30,7 @@ def getSingleCollection(collectionId):
     return collection.to_dict()
 
 
+#___________________________________________________
 
 
 
@@ -61,6 +62,9 @@ def createCollection():
 
 
 
+#___________________________________________________
+
+
 
 
 @collection_routes.route('/edit/<int:collectionId>', methods=['PUT'])
@@ -88,6 +92,7 @@ def updateCollection(collectionId):
     return {'errors': "Could not update this collection"}, 500
 
 
+#___________________________________________________
 
 
 
@@ -97,23 +102,11 @@ def deletePostFromCollection(collectionId):
     """
     Deletes collection.
     """
-    # current_user_id = current_user.to_dict()["id"]
-    # owner_collection = Collection.query.get(collectionId)
-
-    # if not owner_collection:
-    #     return {'errors': "Collection could not be found"}, 404
-    # if (current_user_id != owner_collection.user_id):
-    #     return {'errors': "Unauthorized"}, 401
 
     collection = Collection.query.get(collectionId)
 
     if not collection:
             return {"error" : "Collection could not found"}, 404
-
-    # elif collection.user_id != current_user:
-    #         # ic(collection.user_id)
-
-    #         return {"error" : "Unauthorized"}, 401
 
     db.session.delete(collection)
     db.session.commit()
@@ -121,7 +114,7 @@ def deletePostFromCollection(collectionId):
     return {"message": "Successfully deleted comment"}
 
 
-
+#___________________________________________________
 
 
 
@@ -149,7 +142,6 @@ def addPostToCollection():
         if PostCollection.query.filter_by(post_id=post.id, collection_id=collection.id).first():
             return {'errors': "Post is already in collection."}, 400
 
-        # collection.posts_collections.append(PostCollection(post_id=post.id))
         collection.posts.append(post)
 
         ic([post.to_dict() for post in collection.posts])
@@ -162,11 +154,9 @@ def addPostToCollection():
     return {'errors': form.errors}, 400
 
 
- # collection.posts_collections.append(PostCollection(post_id=post.id))
-        # db.session.commit()
+#___________________________________________________
 
-        # updated_collection = Collection.query.get(collection.id).to_dict()
-        # return {'collection': updated_collection}
+
 
 @collection_routes.route('/<int:collectionId>/removePost/<int:postId>', methods=['DELETE'])
 @login_required
@@ -174,29 +164,15 @@ def removePostFromCollection(collectionId, postId):
     """
     Removes post from collection.
     """
-    print("AAAAAAAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! - TOP")
+
     collection = Collection.query.get(collectionId)
-
-    ic(collection)
-
     post = Post.query.get(postId)
-
-    ic(post)
-
     idx = collection.posts.index(post)
-
-    ic(idx)
-
-    ic(collection.posts[idx])
-
     collection.posts.pop(idx)
 
-    print("AAAAAAAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! - BOTTOM")
-
-    # postCollection = PostCollection.query.filter(PostCollection.collection_id == collectionId)
-    # post1 = [post for post in postCollection if post.id == postId]
-
-
-    # db.session.delete(post1)
     db.session.commit()
     return collection.to_dict()
+
+
+
+#___________________________________________________

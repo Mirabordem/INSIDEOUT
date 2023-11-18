@@ -7,7 +7,7 @@ export const FETCH_PHOTO_URL_REQUEST = "posts/FETCH_PHOTO_URL_REQUEST";
 export const FETCH_PHOTO_URL_SUCCESS = "posts/FETCH_PHOTO_URL_SUCCESS";
 export const FETCH_PHOTO_URL_FAILURE = "posts/FETCH_PHOTO_URL_FAILURE";
 
-// Actions:
+// actions:
 
 const getAllPosts = (posts) => ({
   type: GET_ALL_POSTS,
@@ -43,6 +43,8 @@ export const fetchPhotoUrlFailure = (error) => ({
   type: FETCH_PHOTO_URL_FAILURE,
   error,
 });
+
+
 
 //___________________________________________________
 
@@ -180,6 +182,10 @@ const initialState = { allPosts: {}, singlePost: {} };
 
 //___________________________________________________
 
+
+// reducer:
+
+
 export default function postsReducer(state = initialState, action) {
   let newState;
 
@@ -215,10 +221,7 @@ export default function postsReducer(state = initialState, action) {
       delete newState.allPosts[action.postId];
       return newState;
 
-
-
       
-
     case FETCH_PHOTO_URL_REQUEST:
       return {
         ...state,

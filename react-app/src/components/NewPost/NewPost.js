@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { createSinglePostThunk, getAllPostsThunk } from "../../store/post";
 import { useModal } from "../../context/Modal";
@@ -13,8 +13,6 @@ export default function NewPost() {
   const [text, setText] = useState("");
   const [photo, setPhoto] = useState(null);
   const [photoPreview, setPhotoPreview] = useState(null);
-  const [showInput, setShowInput] = useState(false);
-  const [errors, setErrors] = useState([]);
   const [frontendErrors, setFrontendErrors] = useState({});
   const [dragging, setDragging] = useState(false);
   const [uploadStatus, setUploadStatus] = useState("Drag and drop or");

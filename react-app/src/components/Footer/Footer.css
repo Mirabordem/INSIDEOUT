@@ -1,7 +1,5 @@
 #footer-container {
     background-color: rgb(60, 59, 59);
-    /* color:rgb(141, 126, 133); */
-    /* color: rgb(188, 185, 185); */
     color: white;
     font-weight: 100;
     position: relative;
@@ -15,7 +13,7 @@
 }
 
 .creator1 {
-    margin-right: 40px;
+    margin-right: 70px;
     margin-top: 10px;
     font-weight: bold;
     font-style: italic;
@@ -32,7 +30,7 @@
 }
 
 .creator-text {
-    margin-right: 10px;
+    margin-right: 20px;
     display: flex;
     align-items: center;
 }
@@ -56,4 +54,16 @@
     font-style: italic;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.465);
+}
+
+.footer-icon {
+    color: rgb(226, 226, 226);
+    font-size: 16px;
+    transition: color 0.2s ease-in-out;
+    margin-left: 15px;
+}
+
+.footer-icon:hover {
+    cursor: pointer;
+    color: rgb(126, 120, 120);
 }

@@ -9,7 +9,8 @@
     color: white;
     /* font-weight: bold; */
     font-size: 14px;
-    background-color: rgb(183, 183, 183);
+    /* background-color: rgb(183, 183, 183); */
+    background-color: rgb(30, 206, 206);
     border-radius: 5px;
     margin-left: 13px;
 
@@ -70,8 +71,6 @@
 }
 
 #collection-list-for-adding-post {
-    /* border: 2px solid red; */
-    /* border-bottom: 1px solid rgb(234, 236, 237); */
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
     margin-bottom: 5px;

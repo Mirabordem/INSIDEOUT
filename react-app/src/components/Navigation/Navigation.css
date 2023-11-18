@@ -110,13 +110,14 @@
   font-size: 14px;
   font-style: oblique;
   text-decoration: none;
-  color: black;
+  /* color: black; */
+  color: rgb(161, 158, 158);
 }
 
 .text {
   text-decoration: none;
-  /* color: rgb(161, 158, 158); */
-  color: black;
+  /* color: black; */
+  color: rgb(161, 158, 158);
   margin-top: 0;
   margin-bottom: 2px;
   padding-bottom: 0;
