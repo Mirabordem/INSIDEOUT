@@ -97,6 +97,10 @@ export default function PostDetails() {
     }
   };
 
+  if (!post) {
+    return <p>Loading...</p>;
+  }
+
 
   return (
     <div className="single-post-main">

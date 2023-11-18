@@ -36,6 +36,7 @@ return (
                         <SinglePost post={post} photoUrl={post.photoUrl} />
                     </div>
                 ))}
+
                 </Masonry>
             </div>
 

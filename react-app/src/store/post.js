@@ -275,13 +275,13 @@ export default function postsReducer(state = initialState, action) {
         action.posts.forEach((post) => newState[post.id] = post)
         return newState
 
+
         case CLEAR_SEARCH_RESULTS:
           return {
             ...state,
             allPosts: {},
+            singlePost: {},
           };
-
-
 
 
     default:
