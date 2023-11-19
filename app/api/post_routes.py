@@ -215,4 +215,9 @@ def posts_search(search):
         return [post.to_dict() for post in searched_posts]
     else:
         return {"errors": "There is no post to match your search."}
-   
+
+
+
+
+
+
