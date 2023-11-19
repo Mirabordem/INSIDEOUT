@@ -8,9 +8,9 @@ class Comment(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    post_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('posts.id')), nullable=False)
+    post_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('posts.id')))
     user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
-    text = db.Column(db.String(200), nullable=False)
+    text = db.Column(db.String(220), nullable=False)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
     updated_at = db.Column(db.DateTime, nullable=False, default=datetime.now())
 
@@ -25,4 +25,5 @@ class Comment(db.Model):
         'text': self.text,
         'createdAt': self.created_at.strftime('%B %d, %Y'),
         'updatedAt': self.updated_at.strftime('%B %d, %Y'),
+        'user': self.user.to_dict() if self.user else None,
     }

@@ -17,8 +17,7 @@ class PostCollection(db.Model):
     posts = db.relationship('Post', back_populates='posts_collections')
     collections = db.relationship('Collection', back_populates='posts_collections')
 
-    # posts = db.relationship('Post', back_populates='posts_collections', viewonly=True, overlaps="collections")
-    # collections = db.relationship('Collection', back_populates='posts_collections', viewonly=True, overlaps="posts")
+   
 
 
 

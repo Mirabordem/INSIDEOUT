@@ -42,20 +42,20 @@ export default function PostUpdateButton({ user, postId }) {
         {user ? (
           <div className="dropdown">
             <OpenModalButton
-              className="new-post-modal"
+              className="new-post-modal3"
               buttonText={
                 <>
-                  EDIT POST
+                  ● UPDATE POST
                 </>
               }
               modalComponent={<EditPost postId={postId} />}
             />
 
             <OpenModalButton
-              className="new-post-modal"
+              className="new-post-modal3"
               buttonText={
                 <>
-                  DELETE POST
+                  ● DELETE POST
                 </>
               }
               modalComponent={<DeletePost postId={postId} />}

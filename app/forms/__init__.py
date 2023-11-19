@@ -5,3 +5,5 @@ from .edit_post_form import EditPostForm
 from .post_collection_form import PostCollectionForm
 from .collection_form import CollectionForm
 from .update_collection_form import UpdateCollectionForm
+from .edit_comment_form import EditCommentForm
+from .comment_form import CommentForm

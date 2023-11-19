@@ -16,6 +16,7 @@ function SignupFormModal() {
 	const history = useHistory();
 	const [validationObject, setValidationObject] = useState({});
 
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
@@ -58,6 +59,8 @@ function SignupFormModal() {
 			closeModal();
 		}
 	};
+
+
 
 	return (
 		<div className="signup-container">

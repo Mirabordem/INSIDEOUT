@@ -2,9 +2,9 @@ export const GET_ALL_COLLECTIONS = "collections/GET_ALL_COLLECTIONS";
 export const GET_SINGLE_COLLECTION = "collections/GET_SINGLE_COLLECTION";
 export const CREATE_SINGLE_COLLECTION = "collections/CREATE_SINGLE_COLLECTION";
 export const DELETE_SINGLE_COLLECTION = "collections/DELETE_SINGLE_COLLECTION";
-// export const DELETE_POST_FROM_COLLECTION = "collections/DELETE_POST_FROM_COLLECTION";
 
-// Actions:
+
+// actions:
 
 const getAllCollections = (collections) => ({
   type: GET_ALL_COLLECTIONS,
@@ -26,10 +26,7 @@ const deleteSingleCollection = (collectionId) => ({
   collectionId,
 });
 
-// const deletePostFromCollection = (postId) => ({
-//   type: DELETE_POST_FROM_COLLECTION,
-//   postId
-// })
+
 
 //___________________________________________________
 
@@ -177,6 +174,7 @@ export const RemovePostFromCollectionThunk =
     }
   };
 
+
 //___________________________________________________
 
 const initialState = {
@@ -187,6 +185,10 @@ const initialState = {
 };
 
 //___________________________________________________
+
+// reducer:
+
+
 
 export default function collectionsReducer(state = initialState, action) {
   let newState;
@@ -202,9 +204,6 @@ export default function collectionsReducer(state = initialState, action) {
 
     case GET_SINGLE_COLLECTION:
       const newSingleState = { ...state, singleCollection: { ...action.collection } };
-
-      // console.log("State after GET_SINGLE_COLLECTION:", newState);
-
       return newSingleState;
 
 
@@ -215,6 +214,7 @@ export default function collectionsReducer(state = initialState, action) {
         singleCollection: { ...action.collection },
       };
       return newState;
+      
 
     case DELETE_SINGLE_COLLECTION:
       newState = {

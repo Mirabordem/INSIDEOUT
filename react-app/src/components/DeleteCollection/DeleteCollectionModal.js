@@ -3,7 +3,8 @@ import { useModal } from '../../context/Modal'
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom"
 import { DeleteCollectionThunk } from '../../store/collection';
-import './DeleteCollection.css'
+
+
 
 export default function DeleteCollectionModal({ collectionId, collection }) {
 

@@ -1,0 +1,95 @@
+.createReviewForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.textArea {
+    padding: 15px;
+}
+
+.smallFont {
+    font-size:x-small;
+    color: orangered;
+}
+
+
+.fileCreate {
+    background-color: black;
+    border: 1px solid grey;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px black;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px darkgray;
+}
+
+
+.new-comment-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: rgb(171, 169, 169);
+    height: 330px;
+    width: 330px;
+    padding-bottom: 40px;
+    z-index: 5000;
+}
+
+
+.fileCreate {
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(30, 206, 206);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    width:80%;
+    height: 40px;
+    margin-top: 0;
+}
+
+.fileCreate:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: aqua;
+}
+
+
+.comments-share-title {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    color: white;
+}
+
+
+.textArea {
+    background-color: rgb(60, 59, 59);
+    color: rgb(203, 200, 200);
+    font-weight: 100;
+    font-size: 12px;
+    border: none;
+    width: 100%;
+    height: 120px;
+}
+
+
+.new-comment-main-container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: rgb(171, 169, 169);
+    height: 230px;
+    width: 330px;
+    padding-bottom: 40px;
+    z-index: 5000;
+}

@@ -1,6 +1,6 @@
 .main-home-container {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr
+  grid-template-columns: 1fr 3.5fr 1fr
 }
 
 .Masonry {
@@ -13,12 +13,7 @@
   padding: 0 0;
   box-sizing: content-box;
   min-height: calc(100vh - 100px);
-  /* border-left: 2px solid rgb(223, 222, 222);
-  border-right: 2px solid rgb(223, 222, 222);
-  box-shadow: 1px 1px 10px rgb(223, 222, 222); */
-  /* z-index: 1; */
 }
-
 
 
 .my-masonry-grid {
@@ -56,7 +51,6 @@
 .dropdown5 {
   position: absolute;
   background-color: rgb(30, 206, 206);
-  /* margin-left: 2px; */
   margin-top: 20px;
   border-radius: 8px;
   width: 230px;
@@ -64,14 +58,12 @@
 }
 
 .collection-list1 {
-
   margin-left: 10px;
   list-style: none;
   padding: 0;
 }
 
 .collection-list1 li {
-
   text-decoration: none;
   margin-bottom: 5px;
   border-bottom: 1px solid #ccc;
@@ -83,6 +75,21 @@
   text-decoration: none;
 }
 
-/* .collection-list1 li:last-child {
-  border-bottom: none;
-} */
+
+.post-button-your-collections {
+  width: 280px;
+  height: 30px;
+  font-size: 14px;
+  margin-top: 161px;
+  margin-left: 40px;
+  transition: color 0.3s;
+  border: none;
+  background-color: rgb(30, 206, 206);
+  border-radius: 10px;
+  color: white;
+}
+
+.post-button-your-collections:hover {
+  cursor: pointer;
+  background-color: aqua;
+}

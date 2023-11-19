@@ -8,9 +8,10 @@ import Navigation from "./components/Navigation/Navigation";
 import Home from './components/Home/Home';
 import PostDetails from "./components/PostDetails/PostDetails";
 import LandingPage from "./components/LandingPage/LandingPage";
-import ProfilePage from "./components/ProfilePage/ProfilePage";
+// import ProfilePage from "./components/ProfilePage/ProfilePage";
 import CollectionDetails from "./components/CollectionDetails/CollectionDetails";
 import Footer from "./components/Footer/Footer";
+import SearchBarPage from "./components/SearchBarPage/SearchBarPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -37,14 +38,17 @@ function App() {
           <Route exact path='/posts'>
             <Home />
           </Route>
-          <Route path="/user">
+          {/* <Route path="/user">
               <ProfilePage />
-          </Route>
+          </Route> */}
           <Route exact path='/posts/:postId'>
             <PostDetails />
           </Route>
           <Route path="/collections/:collectionId">
               <CollectionDetails />
+          </Route>
+          <Route exact path="/search">
+            <SearchBarPage />
           </Route>
         </Switch>
       )}
