@@ -10,6 +10,7 @@ from .api.auth_routes import auth_routes
 from .api.post_routes import post_routes
 from .api.comment_routes import comment_routes
 from .api.collection_routes import collection_routes
+# from .api.likes_routes import likes_routes
 from .seeds import seed_commands
 from .config import Config
 
@@ -33,6 +34,7 @@ app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(post_routes, url_prefix='/api/posts')
 app.register_blueprint(collection_routes, url_prefix='/api/collections')
 app.register_blueprint(comment_routes, url_prefix='/api/comments')
+# app.register_blueprint(likes_routes, url_prefix='/api/likes')
 db.init_app(app)
 Migrate(app, db)
 

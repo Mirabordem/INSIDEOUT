@@ -5,6 +5,7 @@ from .posts import seed_posts, undo_posts
 from .collections import seed_collections, undo_collections
 from .post_collection import undo_posts_collections
 from .comments import seed_comments, undo_comments
+# from .likes import seed_likes, undo_likes
 
 
 
@@ -21,6 +22,7 @@ def seed():
     if environment == 'production':
         undo_posts_collections()
         undo_comments()
+        # undo_likes()
         undo_collections()
         undo_posts()
         undo_photos()
@@ -28,16 +30,17 @@ def seed():
     seed_users()
     seed_photos()
     posts = seed_posts()
+    # seed_likes()
     seed_comments()
     seed_collections(posts)
 
-    # seed_comments()
 
 # Creates the `flask seed undo` command
 @seed_commands.command('undo')
 def undo():
     undo_posts_collections()
     undo_comments()
+    # undo_likes()
     undo_photos()
     undo_collections()
     undo_posts()

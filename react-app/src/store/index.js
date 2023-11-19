@@ -4,13 +4,16 @@ import session from './session'
 import posts from './post';
 import collections from './collection';
 import comments from './comments';
+// import like from './likes';
+// import likeReducer from './likes';
 
 
 const rootReducer = combineReducers({
   session,
   posts,
   collections,
-  comments
+  comments,
+  // singleLike: likeReducer
 });
 
 
