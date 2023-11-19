@@ -31,7 +31,7 @@ class Post(db.Model):
             'id': self.id,
             'userId': self.user_id,
             'photoId': self.photo_id,
-            'title': self.title,
+            'title': self.title[:120],
             'text': self.text,
             'createdAt': self.created_at.strftime('%B %d, %Y'),
             'updatedAt': self.updated_at.strftime('%B %d, %Y'),
