@@ -107,19 +107,19 @@ export default function PostDetails() {
     return <p>Loading...</p>;
   }
 
-  const isLiked = likeStatus[postId] || false;
+  // const isLiked = likeStatus[postId] || false;
 
-  const handleLikeClick = async () => {
-    try {
-      setLikeStatus((prevLikeStatus) => ({
-        ...prevLikeStatus,
-        [postId]: !prevLikeStatus[postId],
-      }));
-      setLikeCount((prevLikeCount) => (isLiked ? prevLikeCount - 1 : prevLikeCount + 1));
-    } catch (error) {
-      console.error("Error updating like status:", error);
-    }
-  };
+  // const handleLikeClick = async () => {
+  //   try {
+  //     setLikeStatus((prevLikeStatus) => ({
+  //       ...prevLikeStatus,
+  //       [postId]: !prevLikeStatus[postId],
+  //     }));
+  //     setLikeCount((prevLikeCount) => (isLiked ? prevLikeCount - 1 : prevLikeCount + 1));
+  //   } catch (error) {
+  //     console.error("Error updating like status:", error);
+  //   }
+  // };
 
   return (
     <div className="single-post-main">
@@ -168,12 +168,12 @@ export default function PostDetails() {
                 <div className="three-dots-button">
                   <PostUpdateButton user={user} postId={post.id} />
                 </div>
-                <i
+                {/* <i
                   className={isLiked ? "fas fa-heart" : "far fa-heart empty-heart1"}
                   style={isLiked ? { color: "aqua" } : null}
                   onClick={handleLikeClick}
                 ></i>
-                <p>{likeCount} {likeCount === 1 ? "like" : "likes"}</p>
+                <p>{likeCount} {likeCount === 1 ? "like" : "likes"}</p> */}
               </div>
             </div>
           </div>
