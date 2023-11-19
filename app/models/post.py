@@ -38,5 +38,5 @@ class Post(db.Model):
             'photoUrl': self.photo.photo_url,
             'User' : self.user.to_dict(),
             'comments': [comment.to_dict() for comment in self.comments],
-            'commentCount' : len(self.comments),
+            # 'commentCount' : len(self.comments),
         }
