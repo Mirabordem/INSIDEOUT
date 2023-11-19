@@ -21,6 +21,9 @@ class Post(db.Model):
     collections = db.relationship('Collection', secondary=add_prefix_for_prod('posts_collections'), back_populates='posts')
     posts_collections = db.relationship('PostCollection', back_populates='posts')
     comments = db.relationship('Comment', back_populates='post', cascade='all, delete')
+    # likes = db.relationship("Like", back_populates="posts", cascade="all, delete-orphan")
+    # likers = db.relationship('User', secondary=likes, back_populates='liked_posts')
+    # likes = db.relationship('Like', back_populates='post')
 
 
     def to_dict(self):

@@ -14,7 +14,8 @@ export default function Home() {
   const collectionsObj = useSelector((state) => state.collections.allCollections);
   const collections = collectionsObj ? Object.values(collectionsObj) : [];
   const user = useSelector(state => state.session.user);
-  const user_collections = collections.filter(collections => collections.user_id === user.id);
+  // const user_collections = collections.filter(collections => collections.user_id === user.id);
+  const user_collections = user && user.id ? collections.filter(collection => collection.user_id === user.id) : [];
   const [showDropdown, setShowDropdown] = useState(false);
 
 
@@ -43,11 +44,15 @@ export default function Home() {
             <div className="dropdown5">
             {showDropdown && (
               <ul className="collection-list1">
-                {user_collections.map((collection) => (
-                  <li key={collection.id}>
-                    <NavLink to={`/collections/${collection.id}`}>{collection.name}</NavLink>
-                  </li>
-                ))}
+
+{user_collections.map((collection) => (
+  <li key={collection?.id}>
+    {collection && (
+      <NavLink to={`/collections/${collection.id}`}>{collection.name}</NavLink>
+    )}
+  </li>
+))}
+
               </ul>
             )}
             </div>

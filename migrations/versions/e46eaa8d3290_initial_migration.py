@@ -1,20 +1,16 @@
-"""empty message
+"""Initial migration
 
-Revision ID: 2d04592ebd49
-Revises:
-Create Date: 2023-11-02 09:30:34.365097
+Revision ID: e46eaa8d3290
+Revises: 
+Create Date: 2023-11-19 15:21:20.483305
 
 """
 from alembic import op
 import sqlalchemy as sa
 
-import os
-environment = os.getenv("FLASK_ENV")
-SCHEMA = os.environ.get("SCHEMA")
-
 
 # revision identifiers, used by Alembic.
-revision = '2d04592ebd49'
+revision = 'e46eaa8d3290'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -40,10 +36,10 @@ def upgrade():
     )
     op.create_table('collections',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('name', sa.String(length=180), nullable=False),
+    sa.Column('name', sa.String(length=60), nullable=False),
     sa.Column('description', sa.String(length=1000), nullable=False),
-    sa.Column('type', sa.String(length=255), nullable=True),
-    sa.Column('user_id', sa.Integer(), nullable=True),
+    sa.Column('type', sa.String(length=20), nullable=True),
+    sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
@@ -53,7 +49,7 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('photo_id', sa.Integer(), nullable=False),
-    sa.Column('title', sa.String(length=180), nullable=False),
+    sa.Column('title', sa.String(length=60), nullable=False),
     sa.Column('text', sa.String(length=1000), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
@@ -63,9 +59,9 @@ def upgrade():
     )
     op.create_table('comments',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('post_id', sa.Integer(), nullable=False),
+    sa.Column('post_id', sa.Integer(), nullable=True),
     sa.Column('user_id', sa.Integer(), nullable=False),
-    sa.Column('text', sa.String(length=200), nullable=False),
+    sa.Column('text', sa.String(length=220), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.ForeignKeyConstraint(['post_id'], ['posts.id'], ),
@@ -75,26 +71,12 @@ def upgrade():
     op.create_table('posts_collections',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('post_id', sa.Integer(), nullable=True),
-    sa.Column('collection_id', sa.Integer(), nullable=True),
+    sa.Column('collection_id', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['collection_id'], ['collections.id'], ),
     sa.ForeignKeyConstraint(['post_id'], ['posts.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
     # ### end Alembic commands ###
-
-    if environment == "production":
-        op.execute(f"ALTER TABLE photos SET SCHEMA {SCHEMA};")
-    if environment == "production":
-        op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
-    if environment == "production":
-        op.execute(f"ALTER TABLE collections SET SCHEMA {SCHEMA};")
-    if environment == "production":
-        op.execute(f"ALTER TABLE posts SET SCHEMA {SCHEMA};")
-    if environment == "production":
-        op.execute(f"ALTER TABLE posts_collections SET SCHEMA {SCHEMA};")
-    if environment == "production":
-        op.execute(f"ALTER TABLE comments SET SCHEMA {SCHEMA};")
-
 
 
 def downgrade():

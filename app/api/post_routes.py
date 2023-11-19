@@ -218,6 +218,45 @@ def posts_search(search):
 
 
 
+#___________________________________________________
 
 
 
+@post_routes.route('/<int:postId>/like')
+@login_required
+def add_post_like(postId):
+    """
+    Adds like to a selected post.
+    """
+
+    post = Post.query.get(postId)
+
+    if post in current_user.liked_posts:
+        return { "errors": {"message":"User already likes this post."} }, 405
+
+    current_user.liked_posts.append(post)
+
+    db.session.commit()
+    return current_user.to_dict()
+
+
+
+
+@post_routes.route('/<int:postId>/unlike')
+@login_required
+def remove_post_like(postId):
+    """
+    Removes like from a selected post.
+    """
+
+    post = Post.query.get(postId)
+
+    try:
+        idx = current_user.liked_posts.index(post)
+    except ValueError:
+        return { "errors": {"message" : "User does not like this post."} }, 405
+
+    current_user.liked_posts.pop(idx)
+
+    db.session.commit()
+    return current_user.to_dict()

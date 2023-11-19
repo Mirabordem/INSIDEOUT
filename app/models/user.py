@@ -20,6 +20,9 @@ class User(db.Model, UserMixin):
     posts = db.relationship('Post', back_populates='user')
     comments = db.relationship('Comment', back_populates='user')
     collections = db.relationship('Collection', back_populates='user')
+    # likes = db.relationship("Like", back_populates="users", cascade="all, delete-orphan")
+    # liked_posts = db.relationship('Post', secondary=likes, back_populates='likers')
+    # likes = db.relationship('Like', back_populates='user')
 
 
 
@@ -40,5 +43,6 @@ class User(db.Model, UserMixin):
             'username': self.username,
             'email': self.email,
             'createdAt': self.created_at.strftime('%B %Y'),
-            'updatedAt': self.updated_at.strftime('%B %Y')
+            'updatedAt': self.updated_at.strftime('%B %Y'),
+            # "likedPosts": [post.id for post in self.liked_posts]
         }

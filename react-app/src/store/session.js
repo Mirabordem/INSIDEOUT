@@ -1,8 +1,11 @@
 // constants
 export const SET_USER = "session/SET_USER";
 export const REMOVE_USER = "session/REMOVE_USER";
-export const ADD_LIKED_POST = "session/createLike";
-export const REMOVE_LIKED_POST = "session/deleteLike";
+
+
+// const ADD_LIKE = "session/createLike";
+// const DELETE_LIKE = "session/deleteLike";
+
 
 
 
@@ -32,28 +35,11 @@ const removeUser = () => ({
 //   };
 
 
-export const createLike = (user, postId) => {
-	return {
-	  type: ADD_LIKED_POST,
-	  user,
-	  postId,
-	};
-  };
-
-  export const deleteLike = (user, postId) => {
-	return {
-	  type: REMOVE_LIKED_POST,
-	  user,
-	  postId,
-	};
-  };
-
-
 
   //___________________________________________________
 
 
-const initialState = { user: null,  likes: {}, };
+const initialState = { user: null };
 
 //___________________________________________________
 
@@ -140,61 +126,36 @@ export const signUp = (username, email, password) => async (dispatch) => {
 
 
 
-// export const ThunkAddLike = (id) => async (dispatch) => {
+
+// export const getLikeThunk = (postId) => async (dispatch) => {
 // 	try {
-// 	  const response = await fetch(`/api/songs/${id}/like`);
-// 	  if (response.ok) {
+// 		const response = await fetch(`/api/posts/${postId}/like`);
+// 		if (response.ok) {
 // 		const user = await response.json();
 // 		await dispatch(createLike(user));
 // 		return user;
-// 	  }
-// 	} catch (err) {
-// 	  const errors = await err.json();
-// 	  return errors;
 // 	}
-//   };
+// 	} catch (err) {
+// 		const errors = await err.json();
+// 		return errors;
+// 	}
+// };
 
-//   export const ThunkDeleteLike = (id) => async (dispatch) => {
+
+
+// export const deleteLikeThunk = (postId) => async (dispatch) => {
 // 	try {
-// 	  const response = await fetch(`/api/songs/${id}/unlike`);
-// 	  if (response.ok) {
+// 		const response = await fetch(`/api/posts/${postId}/unlike`);
+// 		if (response.ok) {
 // 		const user = await response.json();
 // 		await dispatch(deleteLike(user));
 // 		return user;
-// 	  }
-// 	} catch (err) {
-// 	  const errors = await err.json();
-// 	  return errors;
 // 	}
-//   };
-
-export const ThunkAddLike = (postId) => async (dispatch) => {
-	try {
-	  const response = await fetch(`/api/posts/${postId}/like`);
-	  if (response.ok) {
-		const user = await response.json();
-		await dispatch(createLike(user, postId));
-		return user;
-	  }
-	} catch (err) {
-	  const errors = await err.json();
-	  return errors;
-	}
-  };
-
-  export const ThunkDeleteLike = (postId) => async (dispatch) => {
-	try {
-	  const response = await fetch(`/api/posts/${postId}/unlike`);
-	  if (response.ok) {
-		const user = await response.json();
-		await dispatch(deleteLike(user, postId));
-		return user;
-	  }
-	} catch (err) {
-	  const errors = await err.json();
-	  return errors;
-	}
-  };
+// 	} catch (err) {
+// 		const errors = await err.json();
+// 		return errors;
+// 	}
+// };
 
 
 
@@ -209,19 +170,11 @@ export default function reducer(state = initialState, action) {
 			return { user: action.payload };
 		case REMOVE_USER:
 			return { user: null };
+
 		// case ADD_LIKE:
         //     return { user: action.user };
         // case DELETE_LIKE:
         //     return { user: action.user };
-
-		case ADD_LIKED_POST:
-      return { ...state, likedPosts: [...state.likedPosts, action.postId] };
-    case REMOVE_LIKED_POST:
-      return {
-        ...state,
-        likedPosts: state.likedPosts.filter((postId) => postId !== action.postId),
-      };
-
 
 
 		default:

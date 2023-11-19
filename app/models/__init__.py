@@ -6,3 +6,4 @@ from .collection import Collection
 from .photo import Photo
 from .post_collection import PostCollection
 from .comment import Comment
+# from .like import Like

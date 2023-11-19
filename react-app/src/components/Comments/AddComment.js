@@ -36,7 +36,7 @@ export default function AddComment({ postId }) {
     <div className="new-comment-main-container">
         <form onSubmit={handleSubmit} className="createReviewForm">
 
-    <label className="comments-share-title">Share your thoughts...</label>
+    <label className="comments-share-title">Share Your Thoughts</label>
         <textarea
         className="textArea"
         value={text}

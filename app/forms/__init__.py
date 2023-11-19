@@ -7,3 +7,4 @@ from .collection_form import CollectionForm
 from .update_collection_form import UpdateCollectionForm
 from .edit_comment_form import EditCommentForm
 from .comment_form import CommentForm
+# from .likes_form import NewLikeForm, EditLikeForm
