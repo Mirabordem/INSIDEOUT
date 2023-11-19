@@ -22,7 +22,7 @@ export default function UpdateCollectionModal() {
 useEffect(() => {
     const frontendErrors = {};
     if (!name) frontendErrors.name = "A name is required to create your collection";
-    if (name.length > 60) frontendErrors.name = "A name cannot be longer than 60 characters";
+    if (name.length > 120) frontendErrors.name = "A name cannot be longer than 60 characters";
     if (!description) frontendErrors.description = "A description is required to create your collection";
     if (description.length > 1000) frontendErrors.description = "A description cannot be longer than 1000 characters";
     if (!type) frontendErrors.type = "Define the type of your collection.";
