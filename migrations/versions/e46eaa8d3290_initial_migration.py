@@ -1,12 +1,16 @@
 """Initial migration
 
 Revision ID: e46eaa8d3290
-Revises: 
+Revises:
 Create Date: 2023-11-19 15:21:20.483305
 
 """
 from alembic import op
 import sqlalchemy as sa
+
+import os
+environment = os.getenv("FLASK_ENV")
+SCHEMA = os.environ.get("SCHEMA")
 
 
 # revision identifiers, used by Alembic.
@@ -77,6 +81,19 @@ def upgrade():
     sa.PrimaryKeyConstraint('id')
     )
     # ### end Alembic commands ###
+
+    if environment == "production":
+        op.execute(f"ALTER TABLE photos SET SCHEMA {SCHEMA};")
+    if environment == "production":
+        op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
+    if environment == "production":
+        op.execute(f"ALTER TABLE collections SET SCHEMA {SCHEMA};")
+    if environment == "production":
+        op.execute(f"ALTER TABLE posts SET SCHEMA {SCHEMA};")
+    if environment == "production":
+        op.execute(f"ALTER TABLE posts_collections SET SCHEMA {SCHEMA};")
+    if environment == "production":
+        op.execute(f"ALTER TABLE comments SET SCHEMA {SCHEMA};")
 
 
 def downgrade():
