@@ -298,7 +298,7 @@ color: aqua;
   border: 1px solid rgb(218, 214, 214);
   padding-top: 5px;
   padding-left: 30px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .comment-text {
@@ -313,13 +313,13 @@ color: aqua;
 
 
 .profile-icon {
-  width: 28px;
-  height: 28px;
+  width: 31px;
+  height: 31px;
 }
 
 .name-date > p {
   color: rgb(148, 150, 149);
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -380,7 +380,7 @@ color: aqua;
 }
 
 .name-date > h3 {
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
