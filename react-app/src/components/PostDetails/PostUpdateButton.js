@@ -42,7 +42,7 @@ export default function PostUpdateButton({ user, postId }) {
         {user ? (
           <div className="dropdown">
             <OpenModalButton
-              className="new-post-modal3"
+              className="new-post-modal4"
               buttonText={
                 <>
                   ● UPDATE POST
