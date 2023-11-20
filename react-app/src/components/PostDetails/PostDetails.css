@@ -8,6 +8,7 @@
   height: 630px;
   background-color: rgb(60, 59, 59);
   box-shadow: 0px 4px 10px rgb(188, 185, 185);
+
 }
 
 .current-post-image {
@@ -85,7 +86,13 @@ border: none;
 color: aqua;
 }
 
-
+.post-card-container {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 0; */
+}
 
 .current-post-image:hover {
   cursor: pointer;
@@ -387,7 +394,7 @@ color: aqua;
 
 .name-date > p {
   color: rgb(184, 154, 154);
-  font-size: 10px;
+  font-size: 12px;
   font-style: oblique;
   margin-top: 0px;
   margin-bottom: 0px;

@@ -16,8 +16,8 @@ export default function CommentDelete({commentId}) {
     return(
     <div className='delete-container'>
         <div className="h1">Are You Sure?</div>
-        <button className="confirm-button" onClick={deleteFunction}>DELETE COMMENT</button>
-        <button className="cancel-button" onClick={closeModal}>KEEP IT</button>
+        <button className="confirm-button" onClick={deleteFunction}>Remove</button>
+        <button className="cancel-button" onClick={closeModal}>Cancel</button>
     </div>
 )
 }
