@@ -42,7 +42,7 @@ export default function CollectionUpdateButton({ user, collectionId }) {
               className="new-post-modal1"
               buttonText={
                 <>
-                  DELETE COLLECTION
+                  REMOVE COLLECTION
                 </>
               }
               modalComponent={<DeleteCollectionModal collectionId={collectionId} />}

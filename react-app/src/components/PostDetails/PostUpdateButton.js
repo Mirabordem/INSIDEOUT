@@ -55,7 +55,7 @@ export default function PostUpdateButton({ user, postId }) {
               className="new-post-modal3"
               buttonText={
                 <>
-                  ● DELETE POST
+                  ● REMOVE POST
                 </>
               }
               modalComponent={<DeletePost postId={postId} />}
