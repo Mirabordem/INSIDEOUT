@@ -213,12 +213,12 @@ export default function PostDetails() {
                   <div className={comment?.userId !== userId ? "hidden" : "notHidden"}>
                     <OpenModalButton
                       className='edit-comment-button'
-                      buttonText="● UPDATE"
+                      buttonText="Update"
                       modalComponent={<EditComment commentId={comment.id} postId={post.id} />}
                     />
                     <OpenModalButton
                       className='delete-comment-button'
-                      buttonText="● DELETE"
+                      buttonText="Remove"
                       modalComponent={<CommentDelete commentId={comment.id} />}
                     />
                   </div>

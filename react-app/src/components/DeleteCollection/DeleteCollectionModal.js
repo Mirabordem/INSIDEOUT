@@ -36,8 +36,8 @@ export default function DeleteCollectionModal({ collectionId, collection }) {
                 </p>
             )}
             {/* <div className='create-edit-board-buttons'> */}
-                <button className="confirm-button" onClick={deleteCollection}>DELETE</button>
-                <button className="cancel-button" onClick={cancelDelete}>CANCEL</button>
+                <button className="confirm-button" onClick={deleteCollection}>Remove</button>
+                <button className="cancel-button" onClick={cancelDelete}>Cancel</button>
             {/* </div> */}
         </div>
     )

@@ -66,7 +66,7 @@ export default function EditPost() {
                 alt=""
                 src="https://image.jimcdn.com/app/cms/image/transf/none/path/sd0536822daf447dd/image/ic9d478a0b2938cfd/version/1699021732/image.png"
             ></img>
-            <div className="new-h1">Update Post</div>
+            <div className="new2-h1">Update This Post</div>
                 <div className="content-container">
                     <div className="photo-container1">
                         <img className="photo-in-container1" src={post.photoUrl} alt={post.title} />
@@ -80,8 +80,9 @@ export default function EditPost() {
                     )}
                 <div className="new-post-form1">
                     <label className="login-label">
-                        Title
+                        {/* Title */}
                 <input
+                    id="input-text"
                     type="text"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
@@ -93,6 +94,7 @@ export default function EditPost() {
             )}
             <label className="login-label">
                 <textarea
+                    id="input-text"
                     type="text"
                     value={text}
                     onChange={(e) => setText(e.target.value)}
@@ -103,7 +105,7 @@ export default function EditPost() {
             </div>
 
             <div className="login-button">
-                <button type="submit" className="submit-button" onClick={handleSubmit}>
+                <button type="submit" className="submit-button5" onClick={handleSubmit}>
                     UPDATE
                 </button>
                 <button type="button" className="submit-button1" onClick={cancelEdit}>

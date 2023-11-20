@@ -72,7 +72,7 @@ return (
         src="https://image.jimcdn.com/app/cms/image/transf/none/path/sd0536822daf447dd/image/ic9d478a0b2938cfd/version/1699021732/image.png"
         ></img>
 
-            <div className="new-h1">Update Collection</div>
+            <div className="new1-h1">Update Collection</div>
             </div>
 
 
@@ -103,6 +103,7 @@ return (
             )}
             <div>
             <textarea className="single-input"
+                id="input-text"
                 type="text"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
