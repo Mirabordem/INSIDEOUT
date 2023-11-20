@@ -47,7 +47,7 @@ export default function EditComment({ commentId, postId }) {
         value={text}
         onChange={e => setText(e.target.value)}/>
          <p className="smallFont">{errors.text}</p>
-        <button disabled={Object.values(errors).length > 0 } className="fileCreate" type="submit">SUBMIT COMMENT</button>
+        <button disabled={Object.values(errors).length > 0 } className="submit-comment-button" type="submit">SUBMIT COMMENT</button>
         </form>
     </div>
 

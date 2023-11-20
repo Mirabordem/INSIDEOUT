@@ -50,12 +50,26 @@
 
 .dropdown5 {
   position: absolute;
-  background-color: rgb(30, 206, 206);
+  /* background-color: rgb(30, 206, 206); */
+  background-color: rgb(199, 185, 192);
   margin-top: 20px;
   border-radius: 8px;
   width: 230px;
-
 }
+
+.dropdown6 {
+  position: absolute;
+  /* background-color: rgb(30, 206, 206); */
+  /* background-color: rgb(199, 185, 192); */
+  background-color: rgb(159, 189, 189);
+  margin-top: 390px;
+  margin-left: 20px;
+  border-radius: 8px;
+  width: 230px;
+}
+
+
+
 
 .collection-list1 {
   margin-left: 10px;
@@ -75,16 +89,23 @@
   text-decoration: none;
 }
 
+.collection-list1 li a:hover {
+  cursor: pointer;
+  color: aqua;
+}
+
 
 .post-button-your-collections {
   width: 280px;
-  height: 30px;
+  height: 35px;
   font-size: 14px;
   margin-top: 161px;
-  margin-left: 40px;
+  /* margin-left: 40px; */
   transition: color 0.3s;
   border: none;
-  background-color: rgb(30, 206, 206);
+  /* background-color: rgb(30, 206, 206); */
+  /* background-color: rgb(199, 185, 192); */
+  background-color: rgb(27, 168, 168);
   border-radius: 10px;
   color: white;
 }

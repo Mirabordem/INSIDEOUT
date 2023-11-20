@@ -10,7 +10,8 @@
     /* font-weight: bold; */
     font-size: 14px;
     /* background-color: rgb(183, 183, 183); */
-    background-color: rgb(30, 206, 206);
+    /* background-color: rgb(30, 206, 206); */
+    background-color: rgb(159, 189, 189);
     border-radius: 5px;
     margin-left: 40px;
 
@@ -60,7 +61,7 @@
 .add-post-button button {
     all: unset;
     padding: 10px 20px;
-    background-color: rgb(30, 206, 206);
+    background-color:  rgb(27, 168, 168);
     color: white;
     border-radius: 5px;
     cursor: pointer;

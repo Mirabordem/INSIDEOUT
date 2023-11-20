@@ -66,32 +66,22 @@ return (
     <div className='main-home-container1'>
         <div className='collection-dots-container'>
 
+        <CollectionUpdateButton id="dots" user={user} collectionId={collection.id} />
+
         <p className='add-post1'>
               <button id="link-add-post-button1" onClick={handleAddPostClick}>
-                  ADD POSTS TO COLLECTION
+              <span className='duza-kropka'> ● </span> ADD POSTS TO COLLECTION
               </button>
             </p>
 
-
-        <CollectionUpdateButton id="dots" user={user} collectionId={collection.id} />
-
-        <div className="dropdown6">
+        {/* <div className="dropdown6"> */}
             <button
             onClick={toggleDropdown}
-            style={{
-                background: 'transparent',
-                border: '1px solid transparent',
-                // color: 'rgb(60, 59, 59)',
-                cursor: 'pointer',
-                transition: 'color 0.3s',
-              }}
-            className="transparent-button"
-            onMouseOver={(e) => (e.target.style.color = 'aqua')}
-            onMouseOut={(e) => (e.target.style.color = 'rgb(60, 59, 59)')}
+            className="home-button-your-collections1"
           >
-              <span className='duza-kropka' style={{ color: 'aqua' }}> ● </span>YOUR COLLECTIONS
+              <span className='duza-kropka1'> ● </span>YOUR COLLECTIONS
             </button>
-            <div className="dropdown5">
+            <div className="dropdown6">
             {showDropdown && (
               <ul className="collection-list1">
                 {user_collections.map((collection) => (
@@ -102,7 +92,7 @@ return (
                 ))}
               </ul>
             )}
-            </div>
+            {/* </div> */}
           </div>
         </div>
 
@@ -130,15 +120,3 @@ return (
 
 );
 };
-
-
-
-
-
-
-
-
-
-
-
-
