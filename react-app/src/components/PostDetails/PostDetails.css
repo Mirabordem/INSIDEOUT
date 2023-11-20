@@ -45,7 +45,8 @@
   margin-top: 25px;
   padding-top: 20px;
   height: 70px;
-  margin-left: 120px;
+  margin-left: 400px;
+  margin-right: 0;
 }
 
 .post-owner {
@@ -108,7 +109,7 @@ color: aqua;
   height: 60px;
   box-sizing: border-box;
   word-wrap: break-word;
-  margin-left: 70px;
+  margin-left: 220px;
   /* border: 2px solid green; */
 }
 
@@ -118,7 +119,7 @@ color: aqua;
 
 #post-text {
   font-size: 16px;
-  /* margin-right: 50px; */
+  /* margin-left: 200px; */
   width: 700px;
   /* border: 2px solid purple; */
 }
@@ -286,7 +287,7 @@ color: aqua;
   width: 600px;
   word-wrap: break-word;
   margin-bottom: 10px;
-  margin-left: 60px;
+  /* margin-left: 60px; */
   color: rgb(67, 38, 38);
   border: 1px solid rgb(218, 214, 214);
   padding-top: 10px;
