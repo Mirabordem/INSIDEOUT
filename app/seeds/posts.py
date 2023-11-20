@@ -10,7 +10,7 @@ def seed_posts():
         Post(
         user_id=1,
         photo_id=6,
-        title="A Modern Dining Area Overlooking Water",
+        title="Modern Dining with Water View",
         text="As I gazed out of the modern dining area, I couldn't help but be captivated by the stunning view of the tranquil water. It felt like a serene escape, and I couldn't wait to sit down for a meal and take it all in.",
         created_at=current_date,
         updated_at=current_date
@@ -19,7 +19,7 @@ def seed_posts():
         Post(
         user_id=2,
         photo_id=7,
-        title="A Glamour Bathroom with a Sculptural Ceiling Lamp Feature",
+        title="Glamorous Bathroom, Sculptural Ceiling Lamp",
         text="Stepping into the bathroom, I was immediately struck by the glamour it exuded. The sculptural ceiling lamp above the bathtub added a touch of opulence, making it feel like a sanctuary of relaxation.",
         created_at=current_date,
         updated_at=current_date
@@ -28,7 +28,7 @@ def seed_posts():
         Post(
         user_id=3,
         photo_id=8,
-        title="Colorful Playful Dining Area with Modern Art",
+        title="Colorful Dining Area with Modern Art",
         text="I found myself in a colorful and playful dining area adorned with captivating modern art. The vibrant surroundings instantly put me in a cheerful mood, making it the perfect place to share a meal with friends.",
         created_at=current_date,
         updated_at=current_date
@@ -46,8 +46,8 @@ def seed_posts():
         Post(
         user_id=2,
         photo_id=10,
-        title="A Side Table with Animal-Like Sculptures",
-        text="A unique side table caught my attention – it was adorned with sculptures, and its legs resembled playful animals. It was a delightful addition to the room and sparked conversation among guests.",
+        title="A Side Table with Animal Sculptures",
+        text="A unique side table caught my attention, it was adorned with sculptures, and its legs resembled playful animals. It was a delightful addition to the room and sparked conversation among guests.",
         created_at=current_date,
         updated_at=current_date
         ),
@@ -73,7 +73,7 @@ def seed_posts():
         Post(
         user_id=2,
         photo_id=13,
-        title="Palace-Like Open Door to a Modern Dining Room",
+        title="Palace Entry to a Modern Dining Room",
         text="As I pushed open the palace-like doors, I was greeted with a breathtaking view of the modern dining room. The gorgeous wooden floor, adorned with a grand pattern, added an extra layer of luxury to the space.",
         created_at=current_date,
         updated_at=current_date
@@ -91,7 +91,7 @@ def seed_posts():
         Post(
         user_id=2,
         photo_id=16,
-        title="An Outdoor Pool Amidst Beautiful Greenery",
+        title="Outdoor Pool Amid Lush Greenery",
         text="I witnessed an incredible sight as I stepped into an indoor pool surrounded by lush greenery. Someone was jumping into the pool, and the whole scene felt like a moment of pure joy and relaxation.",
         created_at=current_date,
         updated_at=current_date
@@ -100,7 +100,7 @@ def seed_posts():
         Post(
         user_id=3,
         photo_id=17,
-        title="A Sculptural Modern Blue Stairway",
+        title="Sculptural Blue Modern Stairway",
         text="A modern blue stairway caught my eye, and its design felt like a piece of art. The entire space had a sculptural quality, and I marveled at the attention to detail.",
         created_at=current_date,
         updated_at=current_date
@@ -136,7 +136,7 @@ def seed_posts():
         Post(
         user_id=1,
         photo_id=21,
-        title= "Simplicity Meets Sophistication",
+        title= "Sophistication in Simplicity",
         text= "Simplicity and style go hand in hand in this modern living room. The clean lines and open space create a welcoming atmosphere. How do you feel about minimalist design?",
         created_at=current_date,
         updated_at=current_date
@@ -181,7 +181,7 @@ def seed_posts():
         Post(
         user_id=3,
         photo_id=26,
-        title= "Big Modern Living Room with Family Comfort",
+        title="Spacious Modern Living with Family Comfort",
         text="The big modern living room felt like the heart of the home, a perfect family room with a massive TV at its center. It was inviting and cozy, making it an ideal spot to unwind.",
         created_at=current_date,
         updated_at=current_date
@@ -190,7 +190,7 @@ def seed_posts():
         Post(
         user_id=1,
         photo_id=27,
-        title="Tall Modern Living Room with Elegance and Charm",
+        title="Tall Modern Living with Elegance and Charm",
         text="In a tall, modern living room, a large round ceiling feature and golden coffee tables added a touch of grandeur. It felt like a place where elegant gatherings could take place.",
         created_at=current_date,
         updated_at=current_date
@@ -199,7 +199,7 @@ def seed_posts():
         Post(
         user_id=2,
         photo_id=28,
-        title= "A Gallery-Like Living Room with Artistic Flair",
+        title="Artistic Flair in Gallery-Like Living Room",
         text="Another spacious modern living room came into view, and this time, it was adorned with huge art pieces on the wall. It was a gallery-like space, and each piece seemed to tell a story.",
         created_at=current_date,
         updated_at=current_date
@@ -208,7 +208,7 @@ def seed_posts():
         Post(
         user_id=3,
         photo_id=29,
-        title='I was searching for something chill, and I found this!',
+        title="Found Something Chill!",
         text="While exploring an antique store, I stumbled upon a weathered but beautiful side table. The imperfections tell a story, and it's now the centerpiece of my rustic-themed bedroom. Sometimes, it's the unique finds that truly define a space.",
         created_at=current_date,
         updated_at=current_date
@@ -334,7 +334,7 @@ def seed_posts():
         Post(
         user_id=1,
         photo_id=43,
-        title="Stunning and Bright Living Room... A Book Lover's Retreat",
+        title="Stunning Living Room: A Book Lover's Retreat",
         text="The living room was bathed in light, and it beckoned me to pick up a book and unwind. It was a haven of relaxation, and I felt fortunate to be in its embrace.",
         created_at=current_date,
         updated_at=current_date
@@ -343,7 +343,7 @@ def seed_posts():
         Post(
         user_id=2,
         photo_id=44,
-        title="A Stylish Lounging Area with Zebra Stools",
+        title="A Stylish Lounge with Zebra Stools",
         text="The stylish lounging area exuded flair, and I couldn't help but love the zebra stools. They added a playful touch to the space that was both chic and inviting.",
         created_at=current_date,
         updated_at=current_date
@@ -352,7 +352,7 @@ def seed_posts():
         Post(
         user_id=3,
         photo_id=45,
-        title="The Space-Expanding Magic of a Huge Wall Mirror",
+        title="The Space-Expanding Magic of a Large Wall Mirror",
         text="The large mirror on the wall performed an incredible feat—it made the space feel much bigger. It added a touch of glamour and sophistication that was truly enchanting.",
         created_at=current_date,
         updated_at=current_date
@@ -370,7 +370,7 @@ def seed_posts():
         Post(
         user_id=2,
         photo_id=47,
-        title="A Dream Kitchen – Black, White, and Perfect Symmetry",
+        title="A Dream Kitchen, Black, White, and Perfect Symmetry",
         text="I entered a dream kitchen, where black and white reigned supreme with perfect symmetry. It was a chef's haven, a place where culinary creativity knew no bounds.",
         created_at=current_date,
         updated_at=current_date
@@ -433,7 +433,7 @@ def seed_posts():
         Post(
         user_id=3,
         photo_id=54,
-        title="A Venice Apartment Fit for a Princess",
+        title="A Princess' Dream Venice Apartment",
         text="I found myself in a Venice apartment that perfectly combined luxury with modern sensibilities. The colors and decor were a nod to royalty, making me feel like a princess.",
         created_at=current_date,
         updated_at=current_date
@@ -442,7 +442,7 @@ def seed_posts():
         Post(
         user_id=1,
         photo_id=55,
-        title="Huge Blue Painting and Oversized Lamps – A Unique Sitting Room",
+        title="Blue Art and Oversized Lamps in a Unique Sitting Room",
         text="The sitting room was dominated by a massive blue contemporary painting and oversized side lamps that made the space truly unique. It was a work of art in itself.",
         created_at=current_date,
         updated_at=current_date
@@ -451,7 +451,7 @@ def seed_posts():
         Post(
         user_id=2,
         photo_id=56,
-        title="Spacious, Well-Designed Kitchen in Neutral Warmth",
+        title="Well-Designed, Spacious Kitchen with Neutral Warmth",
         text="The kitchen was spacious, well-designed, and oozed both neutral and warm tones. It was a culinary haven where functionality met style.",
         created_at=current_date,
         updated_at=current_date
@@ -460,7 +460,7 @@ def seed_posts():
         Post(
         user_id=3,
         photo_id=57,
-        title="Intriguing Wall Decoration... A Conversation Starter",
+        title="Intriguing Wall Decor... A Conversation Starter",
         text="I couldn't help but be intrigued by the wall decoration in this room. I wondered how it was done, and it was a conversation starter that added depth to the space.",
         created_at=current_date,
         updated_at=current_date
