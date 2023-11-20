@@ -39,7 +39,7 @@ export default function CreateButton({ user, postId }) {
         {user ? (
           <div className="dropdown">
             <OpenModalButton
-              className="new-post-modal2"
+              className="new-post-modal6"
               buttonText={
                 <>
                   <span className='duza-kropka1'> ● </span> CREATE POST
@@ -48,7 +48,7 @@ export default function CreateButton({ user, postId }) {
               modalComponent={<NewPost postId={postId} />}
             />
             <OpenModalButton
-              className="new-post-modal2"
+              className="new-post-modal6"
               buttonText={
                 <>
                   <span className='duza-kropka1'> ● </span> CREATE COLLECTION
