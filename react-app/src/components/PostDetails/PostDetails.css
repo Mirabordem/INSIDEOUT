@@ -5,13 +5,13 @@
   align-items: center;
   justify-content: center;
   /* height: 530px; */
-  height: 900px;
+  height: 630px;
   background-color: rgb(60, 59, 59);
   box-shadow: 0px 4px 10px rgb(188, 185, 185);
 }
 
 .current-post-image {
-  height: 900px;
+  height: 630px;
 }
 
 .post-info-main {
@@ -45,7 +45,7 @@
   margin-top: 25px;
   padding-top: 20px;
   height: 70px;
-  margin-left: 400px;
+  margin-left: 50px;
   margin-right: 0;
 }
 
@@ -57,6 +57,7 @@
 .text-area {
   display: flex;
   flex-direction: row;
+  width:900px;
   margin-top: 10px;
   border-top: 1.5px solid rgb(218, 214, 214);
 
@@ -84,9 +85,7 @@ border: none;
 color: aqua;
 }
 
-.three-dots-button {
-  margin-left: 70px;
-}
+
 
 .current-post-image:hover {
   cursor: pointer;
@@ -109,13 +108,17 @@ color: aqua;
   height: 60px;
   box-sizing: border-box;
   word-wrap: break-word;
-  margin-left: 220px;
+  margin-left: 40px;
   /* border: 2px solid green; */
 }
 
-.like-post-container-main {
-  /* border: 2px solid blue; */
-}
+/* .like-post-container-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid blue;
+} */
 
 #post-text {
   font-size: 16px;
@@ -160,21 +163,23 @@ color: aqua;
 
 
 .post-dots-container {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  padding-top: 0;
+  justify-content: center; */
+  /* padding-top: 0; */
   height: 20px;
   font-size: 50px;
   color: rgb(27, 168, 168);
-  margin-left: 20px;
+  margin-left: 80px;
+  padding-top: 35px;
 }
 
 .post-dots-container:hover {
   cursor: pointer;
   color: aqua;
 }
+
 
 .dropdown {
   position: absolute;
@@ -285,14 +290,15 @@ color: aqua;
 
 
 .single-comment {
-  width: 600px;
+  width: 500px;
   word-wrap: break-word;
   margin-bottom: 10px;
   /* margin-left: 60px; */
   color: rgb(67, 38, 38);
   border: 1px solid rgb(218, 214, 214);
-  padding-top: 10px;
+  padding-top: 5px;
   padding-left: 30px;
+  font-size: 12px;
 }
 
 .comment-text {
@@ -307,13 +313,13 @@ color: aqua;
 
 
 .profile-icon {
-  width: 38px;
-  height: 38px;
+  width: 28px;
+  height: 28px;
 }
 
 .name-date > p {
   color: rgb(148, 150, 149);
-  font-size: 15px;
+  font-size: 10px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -335,16 +341,16 @@ color: aqua;
 
 
 .edit-comment-button {
-  height: 23px;
-  font-size: 12px;
+  height: 20px;
+  font-size: 10px;
   margin-right: 5px;
   margin-top: 0;
   background-color: rgb(27, 168, 168);
 }
 
 .delete-comment-button {
-  height: 23px;
-  font-size: 12px;
+  height: 20px;
+  font-size: 10px;
   margin-bottom: 5px;
    background-color: rgb(27, 168, 168);
 }
@@ -365,7 +371,7 @@ color: aqua;
 }
 
 .comment-date {
-  font-size: 8px;
+  font-size: 6px;
 }
 
 .name-date {
@@ -374,14 +380,14 @@ color: aqua;
 }
 
 .name-date > h3 {
-  font-size: 17px;
+  font-size: 12px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
 .name-date > p {
   color: rgb(184, 154, 154);
-  font-size: 14px;
+  font-size: 10px;
   font-style: oblique;
   margin-top: 0px;
   margin-bottom: 0px;

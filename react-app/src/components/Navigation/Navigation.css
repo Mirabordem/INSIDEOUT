@@ -323,17 +323,18 @@ color: rgb(229, 224, 224);
   /* color: rgb(139, 136, 136); */
   color: rgb(159, 158, 158);
   font-weight: 100;
+  font-size: 11px;
 }
 
 .search-button {
-  width: 40px;
-  height: 30px;
+  width: 29px;
+  height: 27px;
   margin-left: 10px;
   font-size: 14px;
   transition: color 0.3s;
   border: none;
-  /* background-color: rgb(40, 223, 223); */
-  background-color: rgb(27, 168, 168);
+  background-color: rgb(159, 158, 158);
+  /* background-color: rgb(27, 168, 168); */
 
   border-radius: 10px;
   color: white;
