@@ -359,7 +359,7 @@ color: aqua;
   height: 20px;
   font-size: 10px;
   margin-bottom: 5px;
-   background-color: rgb(27, 168, 168);
+  background-color: rgb(27, 168, 168);
 }
 
 .delete-comment-button:hover {
@@ -412,4 +412,5 @@ color: aqua;
   margin-bottom: 40px;
   width: 230px;
   height: 32px;
+  background-color: rgb(27, 168, 168);
 }
