@@ -50,6 +50,15 @@
     margin: 30px;
   }
 
+  .single-input::placeholder {
+    font-size: 14px;
+  }
+
+  .types-collection::placeholder {
+    font-size: 14px;
+    font-weight: 200;
+  }
+
   .new-post-form1 {
     display: flex;
     flex-direction: column;
@@ -66,7 +75,7 @@
     padding: 15px 20px;
     border-radius: 20px;
     border: none;
-    background-color: rgb(30, 206, 206);
+    background-color: rgb(27, 168, 168);
     color: white;
     font-size: 16px;
     font-weight: bold;

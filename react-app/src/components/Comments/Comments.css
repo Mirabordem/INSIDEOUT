@@ -15,20 +15,6 @@
     color: orangered;
 }
 
-
-.fileCreate {
-    background-color: black;
-    border: 1px solid grey;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px black;
-    margin: 5px;
-    cursor: pointer;
-    box-shadow: 2px 2px darkgray;
-}
-
-
 .new-comment-main-container {
     display: flex;
     flex-direction: column;
@@ -43,10 +29,10 @@
 }
 
 
-.fileCreate {
+.submit-comment-button{
     border-radius: 10px;
     border: none;
-    background-color: rgb(30, 206, 206);
+    background-color: rgb(27, 168, 168);
     color: white;
     font-size: 14px;
     cursor: pointer;
@@ -55,7 +41,7 @@
     margin-top: 0;
 }
 
-.fileCreate:hover {
+.submit-comment-button:hover {
     cursor: pointer;
     transform: scale(1.05);
     background-color: aqua;
