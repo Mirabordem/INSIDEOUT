@@ -23,7 +23,7 @@ body, html {
     animation-name: photoChange;
     animation-play-state: running;
     animation-timing-function: steps(1);
-    animation-duration: 30s;
+    animation-duration: 12s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
 
