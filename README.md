@@ -16,7 +16,8 @@ Welcome to INSIDEOUT, the vibrant and dynamic full-stack web application that tr
 💡 Limitless Creativity: 
  - Express your unique style by posting, updating, and deleting your own design inspirations. Every post is a canvas for your imagination.
 
-🏡 Collections, Tailored to You: 
+🚀 Seamless Experience - Collections, Tailored to You: : 
+ - Enjoy a user-friendly platform that empowers you to effortlessly create, update, and delete collections with just a few clicks.
  - Take your interests to the next level by curating collections. Planning a kitchen renovation? Create a 'Kitchen Wonders' collection filled with jaw-dropping kitchen designs.
 
 💬 Dynamic Discussions:
@@ -25,8 +26,6 @@ Welcome to INSIDEOUT, the vibrant and dynamic full-stack web application that tr
 🔍 Search for Brilliance:
  - Introducing the Bonus Feature - a powerful Search Bar! Easily find specific posts by their titles, making it a breeze to rediscover and explore the wealth of inspiration within the INSIDEOUT community.
 
-🚀 Seamless Experience: 
- - Enjoy a user-friendly platform that empowers you to effortlessly create, update, and delete collections with just a few clicks.
 
 Whether you're a design maven or just getting started on your decor journey, INSIDEOUT is where your creativity takes center stage. 
 Let your design dreams run wild!
