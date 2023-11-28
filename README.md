@@ -30,7 +30,6 @@ Welcome to INSIDEOUT, the vibrant and dynamic full-stack web application that tr
 Whether you're a design maven or just getting started on your decor journey, INSIDEOUT is where your creativity takes center stage. 
 Let your design dreams run wild!
 
-#
 
 # Technologies Used:
 
