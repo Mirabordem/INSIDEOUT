@@ -1,5 +1,6 @@
 .errors {
-  color: red;
+  color: orange;
+  margin: 0;
 }
 
 .INSIDEOUT-logo2 {
@@ -22,7 +23,6 @@
 }
 
 .h1-container {
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,5 +199,5 @@
   color: rgb(246, 242, 242);
   font-size: 14px;
   margin-left: 300px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }

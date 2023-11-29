@@ -25,8 +25,8 @@ export default function AddComment({ postId }) {
 
     useEffect(() => {
         const obj = {}
-        if (text && text.length < 10) {
-            obj.text = "Comment must be minimum 10 character"
+        if (text && text.length < 3) {
+            obj.text = "Comment must be minimum 3 character"
         }
         setErrors(obj)
     }, [text])
