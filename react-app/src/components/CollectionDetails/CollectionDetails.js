@@ -1,4 +1,4 @@
-import React, { useEffect, useState, ulRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Masonry from "react-masonry-css";
@@ -26,7 +26,27 @@ export default function CollectionDetails() {
     const [collectionPosts, setCollectionPosts] = useState([])
     const [showDropdown, setShowDropdown] = useState(false);
     const [refresh, setRefresh] = useState('')
+    const [showMenu, setShowMenu] = useState()
     const history = useHistory()
+
+      //
+  const menuRef = useRef();
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setShowMenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuRef]);
+
+//
 
 
 
@@ -83,6 +103,7 @@ return (
             </button>
             <div className="dropdown6">
             {showDropdown && (
+              <div ref={menuRef}>
               <ul className="collection-list1">
                 {user_collections.map((collection) => (
                   <li key={collection.id}>
@@ -91,8 +112,8 @@ return (
 
                 ))}
               </ul>
+              </div>
             )}
-            {/* </div> */}
           </div>
         </div>
 

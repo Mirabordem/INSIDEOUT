@@ -121,8 +121,6 @@ export const DeleteCollectionThunk = (collectionId) => async (dispatch) => {
 };
 
 export const AddPostToCollectionThunk = (formData) => async (dispatch) => {
-  console.log("AddPostToCollectionThunk is being dispatched");
-
   try {
   const res = await fetch("/api/collections/addPost", {
     method: "PUT",
@@ -131,13 +129,10 @@ export const AddPostToCollectionThunk = (formData) => async (dispatch) => {
 
   if (res.ok) {
     const data = await res.json();
-    console.log("data from AddPostToCollectionThunk:", data);
-
     return res;
+
   } else if (res.status < 500) {
     const data = await res.json();
-
-    console.log("response from AddPostToCollectionThunk:", data);
 
     if (data.errors) {
       return data.errors;
@@ -145,9 +140,7 @@ export const AddPostToCollectionThunk = (formData) => async (dispatch) => {
   } else {
     return ["An error occurred. Please try again."];
   }
-
 } catch (error) {
-  console.error("An error occurred:", error.message);
   return ["An error occurred. Please try again."];
 }
 };
@@ -214,7 +207,7 @@ export default function collectionsReducer(state = initialState, action) {
         singleCollection: { ...action.collection },
       };
       return newState;
-      
+
 
     case DELETE_SINGLE_COLLECTION:
       newState = {

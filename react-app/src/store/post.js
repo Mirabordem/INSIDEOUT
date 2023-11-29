@@ -51,6 +51,7 @@ const searchPosts = (posts) => ({
   posts
 })
 
+
 export const clearSearchResults = () => ({
   type: CLEAR_SEARCH_RESULTS,
 });
@@ -189,24 +190,23 @@ export const editSinglePostThunk = (postId, formData) => async (dispatch) => {
 
 //___________________________________________________
 
-// searchBar:
+
 
 export const searchPostsThunk = (search) => async (dispatch) => {
-  const response = await fetch(`/api/posts/search/${search}`)
+  const response = await fetch(`/api/posts/search/${search}`);
   if (response.ok) {
-      const data = await response.json();
-      dispatch(searchPosts(data));
-      return data;
+    const data = await response.json();
+    dispatch(searchPosts(data));
+    return data;
   } else {
-      const errors = await response.json();
-      return errors;
+    const errors = await response.json();
+    return errors;
   }
-}
-
+};
 
 //___________________________________________________
 
-const initialState = { allPosts: {}, singlePost: {} };
+const initialState = { allPosts: {}, singlePost: {}, searchedPosts: {} };
 
 //___________________________________________________
 
@@ -271,17 +271,16 @@ export default function postsReducer(state = initialState, action) {
       };
 
     case POSTS_SEARCH:
-        newState = {}
-        action.posts.forEach((post) => newState[post.id] = post)
-        return newState
+      return {
+        ...state,
+        searchedPosts: { ...state.searchedPosts, ...action.posts },
+      };
 
-
-        case CLEAR_SEARCH_RESULTS:
-          return {
-            ...state,
-            allPosts: {},
-            singlePost: {},
-          };
+    case CLEAR_SEARCH_RESULTS:
+      return {
+        ...state,
+        searchedPosts: {},
+      };
 
 
     default:

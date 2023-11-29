@@ -16,16 +16,19 @@ Welcome to INSIDEOUT, the vibrant and dynamic full-stack web application that tr
 💡 Limitless Creativity: 
  - Express your unique style by posting, updating, and deleting your own design inspirations. Every post is a canvas for your imagination.
 
-🏡 Collections, Tailored to You: 
- - Take your interests to the next level by curating collections. Planning a kitchen renovation? Create a 'Kitchen Wonders' collection filled with jaw-dropping kitchen designs.
+🚀 Seamless Experience - Collections, Tailored to You: : 
+ - Take your interests to the next level by curating collections. Enjoy this user-friendly platform that empowers you to effortlessly create, update, and delete collections with just a few clicks. Planning a kitchen renovation? Create a 'Kitchen Wonders' collection filled with jaw-dropping kitchen designs.
 
-🚀 Seamless Experience: 
- - Enjoy a user-friendly platform that empowers you to effortlessly create, update, and delete collections with just a few clicks.
+💬 Dynamic Discussions:
+ - Engage with the design community through our new Comments feature! Share your thoughts, exchange ideas, and connect with fellow enthusiasts on each post.
+
+🔍 Search for Brilliance:
+ - Introducing the Bonus Feature - a powerful Search Bar! Easily find specific posts by their titles, making it a breeze to rediscover and explore the wealth of inspiration within the INSIDEOUT community.
+
 
 Whether you're a design maven or just getting started on your decor journey, INSIDEOUT is where your creativity takes center stage. 
 Let your design dreams run wild!
 
-#
 
 # Technologies Used:
 
@@ -38,23 +41,40 @@ Let your design dreams run wild!
 
 # Landing Page 
 
-<img width="1424" alt="Screenshot 2023-11-10 at 10 49 28 PM" src="https://github.com/Mirabordem/InsideOut/assets/130639536/c1114530-972a-4a96-8dc0-e6a1a3a704c6">
+<img width="1439" alt="I-LANDING-PAGE" src="https://github.com/Mirabordem/INSIDEOUT/assets/130639536/96c0aac7-5102-44b4-b9bf-bc7265731be5">
+
 
 # Home Page
 
-<img width="1422" alt="Screenshot 2023-11-10 at 10 50 04 PM" src="https://github.com/Mirabordem/InsideOut/assets/130639536/ded68297-dbe2-4b73-b7ef-9f9211be9298">
+<img width="1437" alt="HOME-PAGE" src="https://github.com/Mirabordem/INSIDEOUT/assets/130639536/1b243182-7fc1-4fbe-9a49-4c2359b83efe">
+
 
 # Single Post Page
 
-<img width="1426" alt="Screenshot 2023-11-10 at 10 50 49 PM" src="https://github.com/Mirabordem/InsideOut/assets/130639536/279341e6-115e-4a88-854a-093c23d68874">
+<img width="1438" alt="single-post" src="https://github.com/Mirabordem/INSIDEOUT/assets/130639536/1e5bdf2b-4245-4f90-b4d9-e9a2b7c34a0c">
+
 
 # Single Collection Page
 
-<img width="1428" alt="Screenshot 2023-11-10 at 10 51 03 PM" src="https://github.com/Mirabordem/InsideOut/assets/130639536/017a14fc-b667-4cb2-8d62-e4d465d3ed2f">
+<img width="1440" alt="COLLECTION-PAGE" src="https://github.com/Mirabordem/INSIDEOUT/assets/130639536/20c9584e-7520-40cb-88ce-d6115216ffd9">
 
-# Form Example
+# Comments Area
 
-<img width="1423" alt="Screenshot 2023-11-10 at 10 51 20 PM" src="https://github.com/Mirabordem/InsideOut/assets/130639536/9f02da3d-ba0d-4f0b-97a6-f3b0e4c32ec3">
+<img width="1438" alt="POST-PAGE-COMMENTS" src="https://github.com/Mirabordem/INSIDEOUT/assets/130639536/f5fbc5c6-fe78-47a7-b5f8-34f3fd5318a7">
+
+# Search Page
+
+<img width="1437" alt="SEARCH-PAGE" src="https://github.com/Mirabordem/INSIDEOUT/assets/130639536/aa645139-683c-42b0-b74a-932f3d55edaf">
+
+# Log-in Form
+
+<img width="782" alt="LOGIN-FORM-I" src="https://github.com/Mirabordem/INSIDEOUT/assets/130639536/caea0520-1cdf-4bfc-aaec-04b2984cc9b9">
+
+# Create Post Form
+
+<img width="1437" alt="NEW-POST-FORM" src="https://github.com/Mirabordem/INSIDEOUT/assets/130639536/a2a885f1-d531-42c9-91e6-e761c93e664d">
+
+
 
 
 ## Installation Instructions
@@ -87,7 +107,10 @@ flask run
 
 # Wiki Pages
 
-Created by: Miroslawa (Mira) Borkowska
+Developer: 
+  Miroslawa (Mira) Borkowska
+  - CONNECT ON GITHUB: https://github.com/Mirabordem
+  - CONNECT ON LINKEDIN: https://www.linkedin.com/in/miroslawa-borkowska-3b72332a0/
 
 Home:
 https://github.com/Mirabordem/InsideOut/wiki

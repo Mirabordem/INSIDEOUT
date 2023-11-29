@@ -5,10 +5,8 @@ import SinglePost from '../Home/SinglePost';
 import "./SearchBarPage.css"
 
 
-
 export default function SearchBarPage() {
-    const searchedPosts = useSelector((state) => state.posts)
-
+    const searchedPosts = useSelector((state) => state.posts.searchedPosts);
 
 
 return (

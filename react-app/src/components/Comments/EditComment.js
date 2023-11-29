@@ -31,8 +31,8 @@ export default function EditComment({ commentId, postId }) {
     useEffect(() => {
         const obj = {}
 
-        if (text.length < 1) {
-            obj.text = "Comment must be minimum 1 character"
+        if (text.length < 3) {
+            obj.text = "Comment must be minimum 3 characters"
         }
 
         setErrors(obj)

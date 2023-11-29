@@ -23,8 +23,10 @@ export default function NewPost() {
     const frontendErrors = {};
     if (!photo) frontendErrors.images = "Photo is required.";
     if (!title) frontendErrors.title = "Title is required.";
-    if (title.length > 120) frontendErrors.name = "Title can not be longer than 60";
+    if (title.length < 3) frontendErrors.title = "Title needs to be longer than 3 characters";
+    if (title.length > 120) frontendErrors.title = "Title cannot be longer than 120";
     if (!text) frontendErrors.text = "Message is required.";
+    if (text.length < 3) frontendErrors.text = "Message needs to be longer than 3 characters";
     if (text.length > 1000) frontendErrors.text = "Message cannot be longer than 1000 characters";
     setFrontendErrors(frontendErrors);
   }, [photo, title, text]);
@@ -68,7 +70,10 @@ export default function NewPost() {
     setSubmitted(true);
     setLoading(true)
 
-    if (Object.keys(frontendErrors).length > 0) return;
+    if (Object.keys(frontendErrors).length > 0) {
+      setLoading(false)
+      return;
+    }
 
     let formData = new FormData();
     formData.append("title", title);

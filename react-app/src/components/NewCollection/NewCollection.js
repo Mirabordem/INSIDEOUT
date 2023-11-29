@@ -20,14 +20,19 @@ export default function NewCollection() {
     const [submitted, setSubmitted] = useState(false);
     const location = useLocation();
     const currentPath = location.pathname;
+    const [loading, setLoading] = useState(false)
+
 
 useEffect(() => {
     const frontendErrors = {};
     if (!name) frontendErrors.name = "A name is required to create your collection";
+    if (name.length < 3) frontendErrors.name = "A name must be longer than 3 characters";
     if (name.length > 120) frontendErrors.name = "A name cannot be longer than 60 characters";
     if (!description) frontendErrors.description = "A description is required to create your collection";
+    if (description.length < 5) frontendErrors.description = "A description must be longer than 5 characters";
     if (description.length > 1000) frontendErrors.description = "A description cannot be longer than 1000 characters";
     if (!type) frontendErrors.type = "Define the type of your collection.";
+    if (type.length < 3) frontendErrors.type = "Type must be longer than 3 characters";
     if (type.length > 20) frontendErrors.type = "Type cannot be longer than 20 characters";
     setFrontendErrors(frontendErrors);
 }, [name, description, type]);
@@ -37,10 +42,13 @@ useEffect(() => {
 const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitted(true);
+    setLoading(true)
 
     if (Object.keys(frontendErrors).length > 0) {
+        setLoading(false)
         return;
     }
+
     const formData = new FormData();
 
     formData.append("name", name);
@@ -55,8 +63,11 @@ const handleSubmit = async (e) => {
         await dispatch(AllCollectionsThunk());
         await closeModal();
         await history.push(`/collections/${data.id}`);
+        setLoading(false)
     }
 };
+
+const loadingClass1 = loading ? "is-loading" : "not-loading"
 
 return (
     <div className="new-collection-main-container">
@@ -84,7 +95,7 @@ return (
             </label>
 
             {frontendErrors.description && submitted && (
-                <p className="error-message">{frontendErrors.description}</p>
+                <p className="errors">{frontendErrors.description}</p>
             )}
 
             <textarea className="single-input"
@@ -96,7 +107,7 @@ return (
             />
 
             {frontendErrors.type && submitted && (
-                <p className="error-message">{frontendErrors.type}</p>
+                <p className="errors">{frontendErrors.type}</p>
             )}
 
             <label className="single-input">
@@ -114,6 +125,7 @@ return (
             </div>
         </form>
     </div>
+    <div className={loadingClass1}>LOADING...</div>
     </div>
 );
 }
