@@ -51,7 +51,7 @@ Let your design dreams run wild!
 
 # Single Post Page
 
-<img width="1438" alt="POST-PAGE" src="https://github.com/Mirabordem/INSIDEOUT/assets/130639536/1b3008f6-db71-4635-9779-13898106b8e5">
+<img width="1438" alt="single-post" src="https://github.com/Mirabordem/INSIDEOUT/assets/130639536/1e5bdf2b-4245-4f90-b4d9-e9a2b7c34a0c">
 
 
 # Single Collection Page
