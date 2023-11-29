@@ -177,7 +177,6 @@ def edit_post(postId):
 
 
 
-
 @post_routes.route("/<int:postId>", methods=["DELETE"])
 @login_required
 def delete_post(postId):
@@ -187,9 +186,13 @@ def delete_post(postId):
     post = Post.query.get(postId)
 
     if not post:
-        return {'errors': {'error':'Post not found'}}, 404
+        return {'errors': {'error': 'Post not found'}}, 404
     if post.user_id != current_user.id:
-        return {'errors': {'error':'forbidden'}}, 403
+        return {'errors': {'error': 'forbidden'}}, 403
+
+    collections = post.collections
+    for collection in collections:
+        collection.posts.remove(post)
 
     photo_url = post.photo.photo_url
     remove_file_from_s3(photo_url)
@@ -199,8 +202,7 @@ def delete_post(postId):
     db.session.delete(post1)
     db.session.commit()
 
-    return { 'message': 'Successfully Deleted'}, 200
-
+    return {'message': 'Successfully Deleted'}, 200
 
 
 #___________________________________________________

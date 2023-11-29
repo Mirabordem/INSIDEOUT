@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import SinglePost from "./SinglePost";
 import { getAllPostsThunk } from "../../store/post";
@@ -17,6 +17,26 @@ export default function Home() {
   // const user_collections = collections.filter(collections => collections.user_id === user.id);
   const user_collections = user && user.id ? collections.filter(collection => collection.user_id === user.id) : [];
   const [showDropdown, setShowDropdown] = useState(false);
+  const [showMenu, setShowMenu] = useState()
+
+  //
+  const menuRef = useRef();
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setShowMenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuRef]);
+
+//
 
 
   useEffect(() => {
@@ -29,6 +49,10 @@ export default function Home() {
     setShowDropdown(!showDropdown);
   };
 
+  const hideMenuOnClick = () => {
+    setShowMenu(false)
+  }
+
   return (
     <div className="main-home-container">
       <div className="nav-links1">
@@ -36,6 +60,7 @@ export default function Home() {
           <div className="dropdown10">
             <button
               onClick={toggleDropdown}
+              // onButtonClick={hideMenuOnClick}
               className="home-button-your-collections"
             >
               <span className='duza-kropka'> ● </span>
@@ -43,17 +68,20 @@ export default function Home() {
             </button>
             <div className="dropdown5">
             {showDropdown && (
+              <div ref={menuRef}>
               <ul className="collection-list1">
 
-{user_collections.map((collection) => (
+            {user_collections.map((collection) => (
   <li key={collection?.id}>
     {collection && (
       <NavLink to={`/collections/${collection.id}`}>{collection.name}</NavLink>
     )}
   </li>
-))}
+
+            ))}
 
               </ul>
+              </div>
             )}
             </div>
           </div>
