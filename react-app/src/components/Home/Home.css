@@ -71,8 +71,6 @@
 }
 
 
-
-
 .collection-list1 {
   margin-left: 10px;
   list-style: none;
@@ -119,4 +117,22 @@
 .post-button-your-collections:hover {
   cursor: pointer;
   background-color: aqua;
+}
+
+
+
+
+/* Media Query */
+
+@media only screen and (max-width: 600px) {
+
+  .main-home-container {
+    display: grid;
+    grid-template-columns: 0.3fr 3.5fr 0.3fr
+  }
+
+  .Masonry {
+    flex-direction: column;
+  }
+
 }

@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, request
 from flask_login import current_user, login_required
 from app.models import db, Comment, Post
 from app.forms import CommentForm
@@ -18,12 +18,11 @@ def get_comments():
     """
     Gets all comment of one post.
     """
-    # comments = Comment.query.all()
     comments = Comment.query.options(joinedload(Comment.user)).all()
     return [comment.to_dict() for comment in comments]
 
 
-  #___________________________________________________
+#___________________________________________________
 
 
 
@@ -53,7 +52,7 @@ def create_comment():
         db.session.commit()
         return new_comment.to_dict()
     else:
-       return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+        return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 
 #___________________________________________________
@@ -67,9 +66,9 @@ def update_comment(commentId):
     """
     comment = Comment.query.get(commentId)
     if comment and comment.user_id == current_user.id:
-      form = CommentForm()
-      data = form.data
-      form['csrf_token'].data = request.cookies['csrf_token']
+        form = CommentForm()
+        data = form.data
+        form['csrf_token'].data = request.cookies['csrf_token']
 
     if form.validate_on_submit():
             data = form.data
@@ -92,11 +91,11 @@ def delete_comment(commentId):
     """
     comment = Comment.query.get(commentId)
 
-    # if comment and comment.userId == current_user.id:
+
     if comment:
         db.session.delete(comment)
         db.session.commit()
-        # return {"message": "Comment deleted successfully"}
+
         return comment.to_dict()
     else:
         return {"error": "Comment not found or user unauthorized"}, 404
